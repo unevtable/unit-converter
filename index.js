@@ -1,9 +1,11 @@
+// dont mind my bad variable naming (working on it) :>
 const inputEl = document.querySelector('input');
 const btnEl = document.querySelector('#btn');
 const lengthParaEl = document.querySelector('#length');
 const volumeParaEl = document.querySelector('#volume');
 const massParaEl = document.querySelector('#mass');
 
+// dynamic input event (makes input width increase with each value added in inputVal)
 document.addEventListener('DOMContentLoaded', function () {
   const input = document.querySelector('input');
 
@@ -18,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// just for visual purpose didnt want the .subtitle to be empty when you load the DOM
 document.addEventListener('DOMContentLoaded', function () {
   const inputVal = inputEl.value;
 
@@ -33,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   massParaEl.textContent = `${inputVal} kilograms = ${kilogramPound} pounds | ${inputVal} kilograms = ${poundKilogram} pounds`;
 });
 
+// the most important click event to convert the new added values
 btnEl.addEventListener('click', function () {
   const inputVal = inputEl.value;
 
